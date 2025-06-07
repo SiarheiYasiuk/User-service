@@ -6,3 +6,531 @@
 2025-06-01 17:50:48.997 [main] INFO  com.example.userservice.Main - Удалён пользователь: User{id=4, name='Andrey'', email='qqqq', age=23, createdAt=2025-06-01T17:50:00.943014}
 2025-06-01 17:51:35.391 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
 2025-06-01 17:51:36.216 [main] INFO  com.example.userservice.Main - Создан новый пользователь: User{id=1, name='qwer', email='ytr', age=21, createdAt=2025-06-01T17:51:34.837406500}
+2025-06-07 15:48:29.927 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 15:48:29.932 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 15:48:30.119 [main] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Program Files\Microsoft MPI\Bin\, C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin, C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\dotnet\, C:\Program Files\nodejs\, C:\Program Files\Git\cmd, C:\Users\serge\AppData\Local\Microsoft\WindowsApps, D:\Microsoft VS Code\bin, C:\Users\serge\.dotnet\tools, D:\IntelliJ IDEA Community Edition 2022.2.2\bin, C:\Program Files\Azure Data Studio\bin, C:\Program Files\nodejs, C:\Users\serge\AppData\Roaming\npm, C:\Users\serge\AppData\Local\GitHubDesktop\bin, C:\PHP, C:\Program Files\Google\Chrome\Application, , D:\IntelliJ IDEA Community Edition 2024.3.1.1\bin])
+2025-06-07 15:48:30.120 [main] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-06-07 16:08:26.959 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:08:26.967 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:08:27.751 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:08:27.766 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:08:27.805 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:08:27.847 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling docker image: testcontainers/ryuk:0.6.0. Please be patient; this may take some time but only needs to be done once.
+2025-06-07 16:08:30.709 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Starting to pull image
+2025-06-07 16:08:30.776 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-06-07 16:08:35.557 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+2025-06-07 16:08:55.257 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (6 MB/? MB)
+2025-06-07 16:08:55.361 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (6 MB/6 MB)
+2025-06-07 16:08:55.558 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (6 MB/6 MB)
+2025-06-07 16:08:55.757 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (6 MB/6 MB)
+2025-06-07 16:08:55.965 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (6 MB/6 MB)
+2025-06-07 16:08:56.260 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Image testcontainers/ryuk:0.6.0 pull took PT28.4127857S
+2025-06-07 16:08:56.260 [docker-java-stream--496298460] INFO  tc.testcontainers/ryuk:0.6.0 - Pull complete. 3 layers, pulled in 25s (downloaded 6 MB at 248 KB/s)
+2025-06-07 16:08:56.365 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:08:57.212 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: 853045d1173d7e5a68f6d85c753f60848d6ffa499ab5bdb7937b9e8b70a69e94
+2025-06-07 16:09:01.484 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT5.1193912S
+2025-06-07 16:09:01.491 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:09:01.492 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:09:01.493 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:09:01.499 [main] INFO  tc.postgres:15 - Pulling docker image: postgres:15. Please be patient; this may take some time but only needs to be done once.
+2025-06-07 16:09:04.858 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Starting to pull image
+2025-06-07 16:09:04.859 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-06-07 16:09:06.303 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 13 pending,  1 downloaded,  0 extracted, (1 KB/? MB)
+2025-06-07 16:09:06.304 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 12 pending,  2 downloaded,  0 extracted, (1 KB/? MB)
+2025-06-07 16:09:06.502 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 11 pending,  3 downloaded,  0 extracted, (10 KB/? MB)
+2025-06-07 16:09:07.103 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 10 pending,  4 downloaded,  0 extracted, (13 KB/? MB)
+2025-06-07 16:09:07.206 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  9 pending,  5 downloaded,  0 extracted, (13 KB/? MB)
+2025-06-07 16:09:07.301 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  8 pending,  6 downloaded,  0 extracted, (13 KB/? MB)
+2025-06-07 16:09:07.302 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  7 pending,  7 downloaded,  0 extracted, (13 KB/? MB)
+2025-06-07 16:09:07.501 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  6 pending,  8 downloaded,  0 extracted, (13 KB/? MB)
+2025-06-07 16:09:24.301 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  5 pending,  9 downloaded,  0 extracted, (6 MB/? MB)
+2025-06-07 16:09:25.901 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  4 pending, 10 downloaded,  0 extracted, (6 MB/? MB)
+2025-06-07 16:09:53.799 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  3 pending, 11 downloaded,  0 extracted, (18 MB/? MB)
+2025-06-07 16:10:12.704 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pull complete. 14 layers, pulled in 67s (downloaded 27 MB at 414 KB/s)
+2025-06-07 16:10:13.094 [docker-java-stream-22490338] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.102 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (48s remaining)
+2025-06-07 16:10:13.799 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.801 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:13.840 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.841 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:13.892 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.894 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:13.930 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.931 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:13.964 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:13.965 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.009 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.010 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.059 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.060 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.100 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.101 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.136 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.136 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.177 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.179 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.214 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.215 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.246 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.247 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.290 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.291 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.335 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.335 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.373 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.374 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.409 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.410 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.446 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.447 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.492 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.492 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (47s remaining)
+2025-06-07 16:10:14.531 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.532 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.565 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.566 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.598 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.600 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.635 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.636 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.669 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.669 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.706 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.707 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.749 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.750 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.802 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.802 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.840 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.841 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.874 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.875 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.915 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.917 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.948 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:14.949 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:14.999 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.000 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.039 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.040 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.078 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.079 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.142 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.143 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.211 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.212 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.261 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.263 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.302 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.303 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.343 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.344 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.400 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.401 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.437 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.438 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.471 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.471 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (46s remaining)
+2025-06-07 16:10:15.510 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.510 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.544 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.545 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.579 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.580 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.635 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.635 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.676 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.676 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.731 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.731 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.767 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.767 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.812 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.813 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.849 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.849 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.897 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.898 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.937 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.939 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:15.979 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:15.980 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:16.025 [docker-java-stream-1919109365] ERROR com.github.dockerjava.api.async.ResultCallbackTemplate - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"message":"failed to resolve reference \"docker.io/library/postgres:15\": failed to do request: Head \"https://registry-1.docker.io/v2/library/postgres/manifests/15\": writing response to registry-1.docker.io:443: connecting to 127.0.0.1:49996: dial tcp 127.0.0.1:49996: connectex: No connection could be made because the target machine actively refused it."}
+
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:247) ~[testcontainers-1.19.7.jar:1.19.7]
+	at org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269) ~[testcontainers-1.19.7.jar:1.19.7]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-06-07 16:10:16.025 [main] WARN  tc.postgres:15 - Retrying pull for image: postgres:15 (45s remaining)
+2025-06-07 16:10:20.142 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:10:20.159 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:10:20.508 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-07 16:10:20.874 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:10:20.874 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:10:20.909 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:10:20.966 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:10:21.394 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: 5746ca3698c19a696a409b2761057c11f76274e84419aa97ff79e78103ce60f2
+2025-06-07 16:10:22.048 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT1.0814833S
+2025-06-07 16:10:22.056 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:10:22.057 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:10:22.057 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:10:22.074 [main] INFO  tc.postgres:15 - Pulling docker image: postgres:15. Please be patient; this may take some time but only needs to be done once.
+2025-06-07 16:10:24.412 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Starting to pull image
+2025-06-07 16:10:24.421 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-06-07 16:10:26.696 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 13 pending,  1 downloaded,  0 extracted, (1 MB/? MB)
+2025-06-07 16:10:27.397 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 12 pending,  2 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.399 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 11 pending,  3 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.399 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers: 10 pending,  4 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.496 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  9 pending,  5 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.697 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  8 pending,  6 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.698 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  7 pending,  7 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:27.699 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  6 pending,  8 downloaded,  0 extracted, (3 MB/? MB)
+2025-06-07 16:10:37.196 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  5 pending,  9 downloaded,  0 extracted, (11 MB/? MB)
+2025-06-07 16:10:38.896 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  4 pending, 10 downloaded,  0 extracted, (13 MB/? MB)
+2025-06-07 16:10:39.294 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  3 pending, 11 downloaded,  0 extracted, (13 MB/? MB)
+2025-06-07 16:10:45.496 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  2 pending, 12 downloaded,  0 extracted, (24 MB/? MB)
+2025-06-07 16:11:00.594 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  0 extracted, (58 MB/? MB)
+2025-06-07 16:11:02.704 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  1 extracted, (61 MB/? MB)
+2025-06-07 16:11:02.796 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  2 extracted, (61 MB/? MB)
+2025-06-07 16:11:03.004 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  3 extracted, (61 MB/? MB)
+2025-06-07 16:11:03.104 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  4 extracted, (62 MB/? MB)
+2025-06-07 16:11:03.714 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  5 extracted, (63 MB/? MB)
+2025-06-07 16:11:03.901 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  6 extracted, (63 MB/? MB)
+2025-06-07 16:11:03.996 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  7 extracted, (63 MB/? MB)
+2025-06-07 16:11:03.999 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  1 pending, 13 downloaded,  8 extracted, (63 MB/? MB)
+2025-06-07 16:11:42.090 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded,  8 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.093 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded,  9 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.192 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded, 10 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.290 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded, 11 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.391 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded, 12 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.491 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded, 13 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.590 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pulling image layers:  0 pending, 14 downloaded, 14 extracted, (144 MB/146 MB)
+2025-06-07 16:11:45.669 [docker-java-stream-1919109365] INFO  tc.postgres:15 - Pull complete. 14 layers, pulled in 81s (downloaded 144 MB at 1 MB/s)
+2025-06-07 16:11:45.669 [main] INFO  tc.postgres:15 - Image postgres:15 pull took PT1M23.5942854S
+2025-06-07 16:11:45.739 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-07 16:11:49.536 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 8aa04eaee9c4d146afd8d3c5214d734a0f098fe039c9571fada7db70a1904f3e
+2025-06-07 16:11:52.502 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT6.7631229S
+2025-06-07 16:11:52.504 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51124/testdb?loggerLevel=OFF)
+2025-06-07 16:11:53.150 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2025-06-07 16:12:25.197 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:12:25.197 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:12:25.459 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-07 16:12:25.735 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:12:25.735 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:12:25.760 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:12:25.840 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:12:26.186 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: 66d11f4aab3c34ae2d891d8bffd1e29e5d6821506bf708714271c142201e30c5
+2025-06-07 16:12:26.626 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT0.7863813S
+2025-06-07 16:12:26.632 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:12:26.633 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:12:26.634 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:12:26.634 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-07 16:12:26.807 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 0f55f5eebdbddf5ba0a128f7ac7a8259880726ea76624a24fb2b06f4b87e8fc1
+2025-06-07 16:12:28.546 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.9123419S
+2025-06-07 16:12:28.547 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51142/testdb?loggerLevel=OFF)
+2025-06-07 16:12:28.847 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2025-06-07 16:13:33.884 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:13:33.898 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:13:34.486 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-07 16:13:35.108 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:13:35.112 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:13:35.142 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:13:35.295 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:13:35.743 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: fbf850021cb2df7b01065a4eab9987e8fd9a5e12cc6812fced3b19682c1633a8
+2025-06-07 16:13:36.235 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT0.9401361S
+2025-06-07 16:13:36.242 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:13:36.243 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:13:36.244 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:13:36.244 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-07 16:13:36.460 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 843828f803d83b55a2fd149422c1a1e4226dbea53bff7781181d67310c2a9f8b
+2025-06-07 16:13:38.304 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT2.0598341S
+2025-06-07 16:13:38.306 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51168/testdb?loggerLevel=OFF)
+2025-06-07 16:13:38.637 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
