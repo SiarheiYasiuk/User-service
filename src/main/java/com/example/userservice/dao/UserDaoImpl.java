@@ -2,6 +2,8 @@ package com.example.userservice.dao;
 
 import com.example.userservice.entity.User;
 import com.example.userservice.util.HibernateUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,6 +12,7 @@ import java.util.function.Supplier;
 
 public class UserDaoImpl implements UserDao {
     private final SessionFactory sessionFactory;
+    private static final Logger logger = LogManager.getLogger(UserDaoImpl.class);
 
     public UserDaoImpl() {
         this(HibernateUtil::getSessionFactory);
@@ -28,8 +31,13 @@ public class UserDaoImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();
+                try {
+                    transaction.rollback();
+                } catch (Exception rollbackException) {
+                    logger.error("Ошибка при выполнении rollback", rollbackException);
+                }
             }
+            logger.error("Ошибка при сохранении пользователя", e);
             throw e;
         }
     }
@@ -57,10 +65,16 @@ public class UserDaoImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();
+                try {
+                    transaction.rollback();
+                } catch (Exception rollbackException) {
+                    logger.error("Ошибка при выполнении rollback", rollbackException);
+                }
             }
+            logger.error("Ошибка при обновлении пользователя", e);
             throw e;
         }
+
     }
 
     @Override
@@ -72,8 +86,13 @@ public class UserDaoImpl implements UserDao {
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();
+                try {
+                    transaction.rollback();
+                } catch (Exception rollbackException) {
+                    logger.error("Ошибка при выполнении rollback", rollbackException);
+                }
             }
+            logger.error("Ошибка при удалении пользователя", e);
             throw e;
         }
     }
