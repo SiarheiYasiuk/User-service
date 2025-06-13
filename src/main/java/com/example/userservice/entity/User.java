@@ -1,9 +1,14 @@
 package com.example.userservice.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@NoArgsConstructor
 @Table(name = "users")
 public class User {
     @Id
@@ -21,10 +26,6 @@ public class User {
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
-
-    public User() {
-        this.createdAt = LocalDateTime.now();
-    }
 
     public User(String name, String email, Integer age) {
         this.name = name;
@@ -71,16 +72,5 @@ public class User {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", age=" + age +
-                ", createdAt=" + createdAt +
-                '}';
     }
 }

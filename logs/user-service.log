@@ -534,3 +534,80 @@ com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: {"
 2025-06-07 16:13:38.304 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT2.0598341S
 2025-06-07 16:13:38.306 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51168/testdb?loggerLevel=OFF)
 2025-06-07 16:13:38.637 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2025-06-07 16:22:54.718 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:22:54.718 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:22:55.014 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-07 16:22:55.288 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:22:55.288 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:22:55.301 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:22:55.320 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:22:57.651 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: 598a16ffeed1f1aa0d446fc00d3101f312bdd2e257603d258014f45839318522
+2025-06-07 16:22:58.493 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT3.1733785S
+2025-06-07 16:22:58.499 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:22:58.499 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:22:58.499 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:22:58.500 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-07 16:22:58.765 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: be5fa519ba1b7b02d6731b91d95e14c9a8411e1833caf9c42b4cdfdbafdc3390
+2025-06-07 16:23:06.951 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT8.4500484S
+2025-06-07 16:23:06.952 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51435/testdb?loggerLevel=OFF)
+2025-06-07 16:23:07.253 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2025-06-07 16:23:40.828 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-07 16:23:40.844 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-07 16:23:41.088 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-07 16:23:41.361 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-07 16:23:41.376 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-07 16:23:41.399 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-07 16:23:41.493 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-07 16:23:41.845 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: c1a615394dcd2177cb1ccfc1cd46c5870099cb5707dddaa7a986a172f1094f0d
+2025-06-07 16:23:42.275 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT0.7824603S
+2025-06-07 16:23:42.281 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-07 16:23:42.282 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-07 16:23:42.282 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-07 16:23:42.283 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-07 16:23:42.452 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: f1d1c449ed39c0f5b6194524c1e8c61ddaaaa64dff42ed262b974c52f728e722
+2025-06-07 16:23:44.434 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT2.1514629S
+2025-06-07 16:23:44.435 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:51459/testdb?loggerLevel=OFF)
+2025-06-07 16:23:44.723 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2025-06-12 13:05:36.201 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-12 13:05:36.201 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-12 13:05:36.982 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-12 13:05:37.014 [main] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Program Files\Microsoft MPI\Bin\, C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin, C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\dotnet\, C:\Program Files\nodejs\, C:\Program Files\Git\cmd, C:\Program Files\Docker\Docker\resources\bin, C:\Users\serge\AppData\Local\Microsoft\WindowsApps, D:\Microsoft VS Code\bin, C:\Users\serge\.dotnet\tools, D:\IntelliJ IDEA Community Edition 2022.2.2\bin, C:\Program Files\Azure Data Studio\bin, C:\Program Files\nodejs, C:\Users\serge\AppData\Roaming\npm, C:\Users\serge\AppData\Local\GitHubDesktop\bin, C:\PHP, C:\Program Files\Google\Chrome\Application, , D:\IntelliJ IDEA Community Edition 2024.3.1.1\bin])
+2025-06-12 13:05:37.014 [main] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-06-12 13:09:08.481 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-12 13:09:08.489 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-12 13:09:08.754 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-12 13:09:08.764 [main] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Program Files\Microsoft MPI\Bin\, C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin, C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\dotnet\, C:\Program Files\nodejs\, C:\Program Files\Git\cmd, C:\Program Files\Docker\Docker\resources\bin, C:\Users\serge\AppData\Local\Microsoft\WindowsApps, D:\Microsoft VS Code\bin, C:\Users\serge\.dotnet\tools, D:\IntelliJ IDEA Community Edition 2022.2.2\bin, C:\Program Files\Azure Data Studio\bin, C:\Program Files\nodejs, C:\Users\serge\AppData\Roaming\npm, C:\Users\serge\AppData\Local\GitHubDesktop\bin, C:\PHP, C:\Program Files\Google\Chrome\Application, , D:\IntelliJ IDEA Community Edition 2024.3.1.1\bin])
+2025-06-12 13:09:08.764 [main] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+As no valid configuration was found, execution cannot continue.
+See https://java.testcontainers.org/on_failure.html for more details.
+2025-06-13 17:02:35.632 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-06-13 17:02:35.632 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-06-13 17:02:35.977 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-06-13 17:02:36.411 [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-06-13 17:02:36.411 [main] INFO  org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-06-13 17:02:36.445 [main] INFO  org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.1.1
+  API Version: 1.49
+  Operating System: Docker Desktop
+  Total Memory: 5832 MB
+2025-06-13 17:02:36.539 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Creating container for image: testcontainers/ryuk:0.6.0
+2025-06-13 17:02:37.146 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 is starting: 5600d00c165e0324e41d1c1f03e4b65587b821c8a515cef971684bff6d62fc52
+2025-06-13 17:02:38.014 [main] INFO  tc.testcontainers/ryuk:0.6.0 - Container testcontainers/ryuk:0.6.0 started in PT1.4749105S
+2025-06-13 17:02:38.022 [main] INFO  org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-06-13 17:02:38.022 [main] INFO  org.testcontainers.DockerClientFactory - Checking the system...
+2025-06-13 17:02:38.023 [main] INFO  org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-06-13 17:02:38.024 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-06-13 17:02:38.171 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: a70617f15262923584375a0b4ca4a33ef403f31da019f98831a7a1ac360bdd0e
+2025-06-13 17:02:41.063 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT3.0386132S
+2025-06-13 17:02:41.065 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:54741/testdb?loggerLevel=OFF)
+2025-06-13 17:02:41.577 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
