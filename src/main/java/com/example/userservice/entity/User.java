@@ -26,4 +26,11 @@ public class User {
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    public User(String name, String email, Integer age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.createdAt = LocalDateTime.now();
+    }
 }
