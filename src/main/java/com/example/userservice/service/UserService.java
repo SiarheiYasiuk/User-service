@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
+    private final UserEventPublisher userEventPublisher;
 
     @Transactional(readOnly = true)
     public List<UserDto> getAllUsers() {
@@ -39,7 +40,11 @@ public class UserService {
         }
 
         User user = userMapper.toEntity(createUserDto);
-        return userMapper.toDto(userRepository.save(user));
+        User savedUser = userRepository.save(user);
+
+        userEventPublisher.publishUserCreatedEvent(savedUser.getEmail(), savedUser.getName());
+
+        return userMapper.toDto(savedUser);
     }
 
     @Transactional
@@ -61,10 +66,12 @@ public class UserService {
 
     @Transactional
     public void deleteUser(Long id) {
-        if (!userRepository.existsById(id)) {
-            throw new UserNotFoundException(id);
-        }
-        userRepository.deleteById(id);
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
+
+        userEventPublisher.publishUserDeletedEvent(user.getEmail(), user.getName());
+
+        userRepository.delete(user);
     }
 
     private User getUserEntity(Long id) {
