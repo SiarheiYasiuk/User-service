@@ -2,6 +2,7 @@ package com.example.userservice.assertions;
 
 import com.example.userservice.dto.UserDto;
 import org.assertj.core.api.AbstractAssert;
+import org.springframework.hateoas.EntityModel;
 
 public class UserDtoAssert extends AbstractAssert<UserDtoAssert, UserDto> {
 
@@ -11,6 +12,10 @@ public class UserDtoAssert extends AbstractAssert<UserDtoAssert, UserDto> {
 
     public static UserDtoAssert assertThat(UserDto actual) {
         return new UserDtoAssert(actual);
+    }
+
+    public static UserDtoAssert assertThat(EntityModel<UserDto> actual) {
+        return new UserDtoAssert(actual.getContent());
     }
 
     public UserDtoAssert hasId(Long expectedId) {

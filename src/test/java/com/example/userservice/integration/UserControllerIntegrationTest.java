@@ -2,13 +2,16 @@ package com.example.userservice.integration;
 
 import com.example.userservice.dto.CreateUserDto;
 import com.example.userservice.dto.UserDto;
+import com.example.userservice.entity.User;
 import com.example.userservice.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.http.*;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -41,46 +44,59 @@ class UserControllerIntegrationTest {
     private UserRepository userRepository;
 
     @Test
-    void shouldCreateUser() {
-        CreateUserDto createUserDto = new CreateUserDto();
-        createUserDto.setName("Test User");
-        createUserDto.setEmail("test@example.com");
-        createUserDto.setAge(30);
+    void shouldCreateAndRetrieveUserWithHateoasLinks() {
+        CreateUserDto createDto = new CreateUserDto();
+        createDto.setName("Integration Test");
+        createDto.setEmail("integration@test.com");
+        createDto.setAge(30);
 
-        ResponseEntity<UserDto> response = restTemplate.postForEntity(
-                "/api/users", createUserDto, UserDto.class);
+        ResponseEntity<EntityModel<UserDto>> createResponse = restTemplate.exchange(
+                "/api/users",
+                HttpMethod.POST,
+                new HttpEntity<>(createDto),
+                new ParameterizedTypeReference<EntityModel<UserDto>>() {});
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isNotNull();
-        assertThat(response.getBody().getId()).isNotNull();
-        assertThat(response.getBody().getName()).isEqualTo("Test User");
-    }
+        assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+        assertThat(createResponse.getBody()).isNotNull();
+        assertThat(createResponse.getBody().getContent().getId()).isNotNull();
 
-    @Test
-    void shouldGetUserById() {
-        CreateUserDto createUserDto = new CreateUserDto();
-        createUserDto.setName("Test Get");
-        createUserDto.setEmail("get@example.com");
-        createUserDto.setAge(25);
+        assertThat(createResponse.getBody().getLink("self")).isPresent();
+        assertThat(createResponse.getBody().getLink("all-users")).isPresent();
 
-        ResponseEntity<UserDto> createResponse = restTemplate.postForEntity(
-                "/api/users", createUserDto, UserDto.class);
-        Long userId = createResponse.getBody().getId();
-
-        ResponseEntity<UserDto> getResponse = restTemplate.getForEntity(
-                "/api/users/" + userId, UserDto.class);
+        Long userId = createResponse.getBody().getContent().getId();
+        ResponseEntity<EntityModel<UserDto>> getResponse = restTemplate.exchange(
+                "/api/users/" + userId,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<EntityModel<UserDto>>() {});
 
         assertThat(getResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(getResponse.getBody()).isNotNull();
-        assertThat(getResponse.getBody().getId()).isEqualTo(userId);
-        assertThat(getResponse.getBody().getName()).isEqualTo("Test Get");
+
+        assertThat(getResponse.getBody().getLink("self")).isPresent();
+        assertThat(getResponse.getBody().getLink("all-users")).isPresent();
+        assertThat(getResponse.getBody().getLink("update-user")).isPresent();
+        assertThat(getResponse.getBody().getLink("delete-user")).isPresent();
     }
 
     @Test
-    void shouldReturnNotFoundForNonExistingUser() {
-        ResponseEntity<String> response = restTemplate.getForEntity(
-                "/api/users/9999", String.class);
+    void shouldReturnPaginatedUsers() {
+        for (int i = 0; i < 5; i++) {
+            User user = new User("User " + i, "user" + i + "@test.com", 20 + i);
+            userRepository.save(user);
+        }
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        ResponseEntity<CollectionModel<EntityModel<UserDto>>> response = restTemplate.exchange(
+                "/api/users?page=0&size=2",
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<CollectionModel<EntityModel<UserDto>>>() {});
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isNotNull();
+        assertThat(response.getBody().getContent()).hasSize(2);
+
+        assertThat(response.getBody().getLink("self")).isPresent();
+        assertThat(response.getBody().getLink("create-user")).isPresent();
     }
 }

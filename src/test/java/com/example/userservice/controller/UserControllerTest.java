@@ -9,9 +9,17 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -24,41 +32,37 @@ class UserControllerTest {
     private UserController userController;
 
     @Test
-    void getAllUsers_ShouldReturnListOfUsers() {
+    void getAllUsers_ShouldReturnPaginatedUsersWithLinks() {
         // Arrange
-        UserDto userDto = new UserDto();
-        userDto.setId(1L);
-        userDto.setName("Test User");
-        userDto.setEmail("test@example.com");
-        userDto.setAge(30);
+        UserDto user1 = createUserDto(1L, "User1", "user1@test.com", 25);
+        UserDto user2 = createUserDto(2L, "User2", "user2@test.com", 30);
+        Page<UserDto> userPage = new PageImpl<>(List.of(user1, user2),
+                PageRequest.of(0, 10), 2);
 
-        when(userService.getAllUsers()).thenReturn(List.of(userDto));
+        when(userService.getAllUsers()).thenReturn(List.of(user1, user2));
 
         // Act
-        List<UserDto> result = userController.getAllUsers();
+        CollectionModel<EntityModel<UserDto>> result = userController.getAllUsers();
 
         // Assert
-        UserDtoAssert.assertThat(result.get(0))
-                .hasId(1L)
-                .hasName("Test User")
-                .hasEmail("test@example.com")
-                .hasAge(30);
+        assertNotNull(result);
+        assertEquals(2, result.getContent().size());
+
+        // Verify links
+        assertTrue(result.getLink("self").get().getHref().contains("/api/users?page=0&size=10"));
+        assertTrue(result.getLink("create-user").get().getHref().endsWith("/api/users"));
+
         verify(userService).getAllUsers();
     }
 
     @Test
-    void getUserById_ShouldReturnUser() {
+    void getUserById_ShouldReturnUserWithLinks() {
         // Arrange
-        UserDto userDto = new UserDto();
-        userDto.setId(1L);
-        userDto.setName("Test User");
-        userDto.setEmail("test@example.com");
-        userDto.setAge(30);
-
+        UserDto userDto = createUserDto(1L, "Test User", "test@example.com", 30);
         when(userService.getUserById(1L)).thenReturn(userDto);
 
         // Act
-        UserDto result = userController.getUserById(1L);
+        EntityModel<UserDto> result = userController.getUserById(1L);
 
         // Assert
         UserDtoAssert.assertThat(result)
@@ -66,71 +70,96 @@ class UserControllerTest {
                 .hasName("Test User")
                 .hasEmail("test@example.com")
                 .hasAge(30);
+
+        // Verify links
+        assertTrue(result.getLink("self").get().getHref().endsWith("/api/users/1"));
+        assertTrue(result.getLink("all-users").get().getHref().endsWith("/api/users"));
+        assertTrue(result.getLink("update-user").get().getHref().endsWith("/api/users/1"));
+        assertTrue(result.getLink("delete-user").get().getHref().endsWith("/api/users/1"));
+
         verify(userService).getUserById(1L);
     }
 
     @Test
-    void createUser_ShouldReturnCreatedUser() {
+    void createUser_ShouldReturnCreatedUserWithLinks() {
         // Arrange
-        CreateUserDto createUserDto = new CreateUserDto();
-        createUserDto.setName("Test User");
-        createUserDto.setEmail("test@example.com");
-        createUserDto.setAge(30);
+        CreateUserDto createDto = new CreateUserDto();
+        createDto.setName("New User");
+        createDto.setEmail("new@example.com");
+        createDto.setAge(25);
 
-        UserDto expectedUserDto = new UserDto();
-        expectedUserDto.setId(1L);
-        expectedUserDto.setName("Test User");
-        expectedUserDto.setEmail("test@example.com");
-        expectedUserDto.setAge(30);
-
-        when(userService.createUser(createUserDto)).thenReturn(expectedUserDto);
+        UserDto createdUser = createUserDto(1L, "New User", "new@example.com", 25);
+        when(userService.createUser(createDto)).thenReturn(createdUser);
 
         // Act
-        UserDto result = userController.createUser(createUserDto);
+        ResponseEntity<EntityModel<UserDto>> response = userController.createUser(createDto);
 
         // Assert
-        UserDtoAssert.assertThat(result)
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+
+        UserDtoAssert.assertThat(response.getBody())
                 .hasId(1L)
-                .hasName("Test User")
-                .hasEmail("test@example.com")
-                .hasAge(30);
-        verify(userService).createUser(createUserDto);
+                .hasName("New User")
+                .hasEmail("new@example.com")
+                .hasAge(25);
+
+        // Verify location header
+        assertTrue(response.getHeaders().getLocation().toString().endsWith("/api/users/1"));
+
+        // Verify links
+        assertTrue(response.getBody().getLink("self").get().getHref().endsWith("/api/users/1"));
+        assertTrue(response.getBody().getLink("all-users").get().getHref().endsWith("/api/users"));
+
+        verify(userService).createUser(createDto);
     }
 
     @Test
-    void updateUser_ShouldReturnUpdatedUser() {
+    void updateUser_ShouldReturnUpdatedUserWithLinks() {
         // Arrange
-        CreateUserDto updateUserDto = new CreateUserDto();
-        updateUserDto.setName("Updated User");
-        updateUserDto.setEmail("updated@example.com");
-        updateUserDto.setAge(35);
+        CreateUserDto updateDto = new CreateUserDto();
+        updateDto.setName("Updated User");
+        updateDto.setEmail("updated@example.com");
+        updateDto.setAge(30);
 
-        UserDto userDto = new UserDto();
-        userDto.setId(1L);
-        userDto.setName("Updated User");
-        userDto.setEmail("updated@example.com");
-        userDto.setAge(35);
-
-        when(userService.updateUser(1L, updateUserDto)).thenReturn(userDto);
+        UserDto updatedUser = createUserDto(1L, "Updated User", "updated@example.com", 30);
+        when(userService.updateUser(1L, updateDto)).thenReturn(updatedUser);
 
         // Act
-        UserDto result = userController.updateUser(1L, updateUserDto);
+        EntityModel<UserDto> result = userController.updateUser(1L, updateDto);
 
         // Assert
         UserDtoAssert.assertThat(result)
                 .hasId(1L)
                 .hasName("Updated User")
                 .hasEmail("updated@example.com")
-                .hasAge(35);
-        verify(userService).updateUser(1L, updateUserDto);
+                .hasAge(30);
+
+        // Verify links
+        assertTrue(result.getLink("self").get().getHref().endsWith("/api/users/1"));
+        assertTrue(result.getLink("all-users").get().getHref().endsWith("/api/users"));
+        assertTrue(result.getLink("delete-user").get().getHref().endsWith("/api/users/1"));
+
+        verify(userService).updateUser(1L, updateDto);
     }
 
     @Test
-    void deleteUser_ShouldCallService() {
+    void deleteUser_ShouldReturnNoContent() {
         // Act
-        userController.deleteUser(1L);
+        ResponseEntity<Void> response = userController.deleteUser(1L);
 
         // Assert
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
         verify(userService).deleteUser(1L);
+    }
+
+    private UserDto createUserDto(Long id, String name, String email, Integer age) {
+        UserDto dto = new UserDto();
+        dto.setId(id);
+        dto.setName(name);
+        dto.setEmail(email);
+        dto.setAge(age);
+        dto.setCreatedAt(java.time.LocalDateTime.now());
+        return dto;
     }
 }
